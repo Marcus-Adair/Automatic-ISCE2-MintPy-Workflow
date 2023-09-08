@@ -1,0 +1,44 @@
+##-------------------------------- MintPy -----------------------------##
+########## 1. Load Data (--load to exit after this step)
+## load_data.py -H to check more details and example inputs.
+mintpy.load.processor        = isce
+mintpy.load.compression      = gzip 
+mintpy.load.updateMode       = no
+
+##---------for ISCE only:
+mintpy.load.metaFile         = ../reference/IW1.xml 
+mintpy.load.baselineDir      = ../baselines
+##---------interferogram datasets:
+mintpy.load.unwFile          = ../merged/interferograms/*/filt_*.unw
+mintpy.load.corFile          = ../merged/interferograms/*/filt_*.cor
+mintpy.load.connCompFile     = ../merged/interferograms/*/filt_*.unw.conncomp
+##---------geometry datasets:
+mintpy.load.demFile          = ../merged/geom_reference/hgt.rdr
+mintpy.load.lookupYFile      = ../merged/geom_reference/lat.rdr
+mintpy.load.lookupXFile      = ../merged/geom_reference/lon.rdr
+mintpy.load.incAngleFile     = ../merged/geom_reference/los.rdr
+mintpy.load.azAngleFile      = ../merged/geom_reference/los.rdr
+mintpy.load.shadowMaskFile   = ../merged/geom_reference/shadowMask.rdr
+
+mintpy.network.minCoherence  = 0.2
+
+mintpy.reference.minCoherence = 0.2
+mintpy.reference.date        = 20170428
+mintpy.reference.lalo        = 19.677, -155.818
+
+mintpy.networkInversion.minTempCoh = 0.2
+mintpy.networkInversion.maskThreshold = 0.2
+
+
+mintpy.deramp                = linear
+
+mintpy.velocity.startDate    = 20170428
+
+
+##------------------------  HDF-EOS5 --------------------------------##
+mission             = S1                 # ERS,ENV,S1,RS1,RS2,CSK,TSX,JERS,ALOS,ALOS2
+relative_orbit      = 3700
+first_frame         = 593
+last_frame          = 597
+beam_mode           = IW                   # S2,FB08,IW
+processing_software = ISCE

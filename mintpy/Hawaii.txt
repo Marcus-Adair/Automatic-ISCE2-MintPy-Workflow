@@ -9,9 +9,9 @@ mintpy.load.updateMode       = no
 mintpy.load.metaFile         = ../reference/IW1.xml 
 mintpy.load.baselineDir      = ../baselines
 ##---------interferogram datasets:
-mintpy.load.unwFile          = ../merged/interferograms/*/filt_*.unw
-mintpy.load.corFile          = ../merged/interferograms/*/filt_*.cor
-mintpy.load.connCompFile     = ../merged/interferograms/*/filt_*.unw.conncomp
+mintpy.load.unwFile          = ../merged/interferograms/2*/filt_*.unw
+mintpy.load.corFile          = ../merged/interferograms/2*/filt_*.cor
+mintpy.load.connCompFile     = ../merged/interferograms/2*/filt_*.unw.conncomp
 ##---------geometry datasets:
 mintpy.load.demFile          = ../merged/geom_reference/hgt.rdr
 mintpy.load.lookupYFile      = ../merged/geom_reference/lat.rdr
@@ -23,7 +23,7 @@ mintpy.load.shadowMaskFile   = ../merged/geom_reference/shadowMask.rdr
 mintpy.network.minCoherence  = 0.2
 
 mintpy.reference.minCoherence = 0.2
-mintpy.reference.date        = 20170428
+mintpy.reference.date        = 20180306
 mintpy.reference.lalo        = 19.677, -155.818
 
 mintpy.networkInversion.minTempCoh = 0.2
@@ -32,7 +32,7 @@ mintpy.networkInversion.maskThreshold = 0.2
 
 mintpy.deramp                = linear
 
-mintpy.velocity.startDate    = 20170428
+mintpy.velocity.startDate    = 20180306
 
 
 ##------------------------  HDF-EOS5 --------------------------------##

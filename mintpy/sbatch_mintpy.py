@@ -11,10 +11,12 @@
 #SBATCH --mail-type=END            # Email user when job finishes
 #SBATCH --mail-user= # Email address of user
 
-ml purge
-ml gcc/10.3.0
-ml anaconda
-conda activate mintpy_ion
+#ml purge
+#ml gcc/10.3.0
+#ml anaconda
+#conda activate mintpy_ion
+
+
 
 # usage for normal = sbatch sbatch_mintpy.sh
 smallbaselineApp.py Hawaii.txt
@@ -23,4 +25,4 @@ smallbaselineApp.py Hawaii.txt
 #ifgram_inversion.py inputs/ifgramStack.h5 -t smallbaselineApp.cfg
 #smallbaselineApp.py smallbaselineApp.cfg
 
-bounding box: 18.900 20.250 -156.000 -154.800
+#bounding box: 18.900 20.250 -156.000 -154.800
